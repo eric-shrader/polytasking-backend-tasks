@@ -1,0 +1,9 @@
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: https://dev-h1wdtqiuos5sex8g.us.auth0.com/.well-known/jwks.json
+  h2:
+    console:
+      enabled: false
