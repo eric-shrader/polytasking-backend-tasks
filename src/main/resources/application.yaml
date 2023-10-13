@@ -7,3 +7,7 @@ spring:
   h2:
     console:
       enabled: false
+  datasource:
+    url: jdbc:mysql://polytasking.crhavnagsawk.us-east-1.rds.amazonaws.com/Polytasking
+    username: admin
+    driver-class-name: com.mysql.cj.jdbc.Driver
