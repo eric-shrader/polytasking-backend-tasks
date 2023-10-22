@@ -3,11 +3,12 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          jwk-set-uri: https://dev-h1wdtqiuos5sex8g.us.auth0.com/.well-known/jwks.json
+          jwk-set-uri: https://polytasking.us.auth0.com/.well-known/jwks.json
   h2:
     console:
       enabled: false
   datasource:
-    url: jdbc:mysql://polytasking.crhavnagsawk.us-east-1.rds.amazonaws.com/Polytasking
-    username: admin
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:h2:mem:mydb
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
