@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             agent {
-                docker {
+                any {
                     image 'maven:3.9.4-eclipse-temurin-17-alpine'
                     reuseNode true
                     args '-v /root/.m2:/root/.m2'
@@ -15,7 +15,7 @@ pipeline {
         }
         stage('test') {
             agent {
-                docker {
+                any {
                     image 'maven:3.9.4-eclipse-temurin-17-alpine'
                     reuseNode true
                     args '-v /root/.m2:/root/.m2'
