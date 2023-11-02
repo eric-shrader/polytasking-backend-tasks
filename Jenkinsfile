@@ -22,7 +22,6 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 echo 'Building Docker image...'
-                sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
                 sh 'docker build -t ericshrader/polytasking_task_service .'
             }
         }
@@ -30,6 +29,7 @@ pipeline {
         stage('Push to Docker Hub') {
             steps {
                 echo 'Pushing to Docker Hub...'
+                sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
                 sh 'docker push ericshrader/polytasking_task_service'
             }
         }
