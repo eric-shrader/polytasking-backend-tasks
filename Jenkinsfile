@@ -18,6 +18,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 echo 'Building Docker image...'
+                sh 'docker build -t ericshrader/polytasking_task_service'
             }
         }
 
