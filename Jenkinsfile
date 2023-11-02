@@ -22,9 +22,10 @@ pipeline {
             }
         }
 
-        stage('Deploy') {
+        stage('Push to Docker Hub') {
             steps {
-                echo 'Deploying..'
+                echo 'Pushing to Docker Hub..'
+                sh 'docker push ericshrader/polytasking_task_service'
             }
         }
     }
