@@ -140,13 +140,13 @@ public class TaskService {
                 comparator = new TaskDueDateComparator();
         }
 
-        // if (sort[1].equals("ascending") || sort[1].equals("none")) {
-        // Collections.sort(tasks, comparator);
-        // } else if (sort[1].equals("descending")) {
-        // Collections.sort(tasks, comparator);
-        // Collections.reverse(tasks);
-        // } else { // then we dont need to order
-        // return;
-        // }
+        if (sort[1].equals("ascending") || sort[1].equals("none")) {
+            Collections.sort(tasks, comparator);
+        } else if (sort[1].equals("descending")) {
+            Collections.sort(tasks, comparator);
+            Collections.reverse(tasks);
+        } else { // then we dont need to order
+            return;
+        }
     }
 }
